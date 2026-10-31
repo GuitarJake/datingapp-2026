@@ -23,10 +23,11 @@ export class ToastService {
     if (!toastContainer) return;
 
     const toast = document.createElement('Div');
-    toast.classList.add('alert', alertClass, 'shadow-lg');
+//    toast.classList.add('alert', alertClass, 'shadow-lg');
+    toast.classList.add('alert', alertClass, 'shadow-lg', 'flex', 'item-center');
     toast.innerHTML = `
       <span>${message}</span>
-      <button class="ml-4 btn btn-sm btn-ghost">x</button>
+      <button class="ml-auto btn btn-sm btn-ghost">x</button>
     `;
 
     toast.querySelector('button')?.addEventListener('click', () => {
