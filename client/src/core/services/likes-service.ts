@@ -26,8 +26,6 @@ export class LikesService {
     return this.http.get<PaginatedResult<Member>>(this.baseUrl + 'likes', {params});
   }
 
-
-
   getLikeIds() {
     return this.http.get<string[]>(this.baseUrl + 'likes/list').subscribe({
       next: ids => this.likeIds.set(ids)
